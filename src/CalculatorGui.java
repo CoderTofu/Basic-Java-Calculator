@@ -1,3 +1,5 @@
+import Keys.KeyButton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -44,17 +46,17 @@ public class CalculatorGui {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;
-        keys_panel.add(new JButton("÷"), gbc);
+        new KeyButton(keys_panel, "÷", gbc);
 
         gbc.gridx = 2;
         gbc.gridy = 0;
         gbc.gridwidth = 1;
-        keys_panel.add(new JButton("x"), gbc);
+        new KeyButton(keys_panel, "x", gbc);
 
         gbc.gridx = 3;
         gbc.gridy = 0;
         gbc.gridwidth = 1;
-        keys_panel.add(new JButton("-"), gbc);
+        new KeyButton(keys_panel, "-", gbc);
 
         // Here we add our number keys
         KeyNums(gbc);
@@ -62,23 +64,23 @@ public class CalculatorGui {
         gbc.gridx = 3;
         gbc.gridy = 1;
         gbc.gridheight = 2;
-        keys_panel.add(new JButton("+"), gbc);
+        new KeyButton(keys_panel, "+", gbc);
 
         gbc.gridx = 3;
         gbc.gridy = 3;
         gbc.gridheight = 2;
-        keys_panel.add(new JButton("="), gbc);
+        new KeyButton(keys_panel, "=", gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.gridwidth = 2;
         gbc.gridheight = 1;
-        keys_panel.add(new JButton("0"), gbc);
+        new KeyButton(keys_panel, "0", gbc);
 
         gbc.gridx = 2;
         gbc.gridy = 4;
         gbc.gridwidth = 1;
-        keys_panel.add(new JButton("."), gbc);
+        new KeyButton(keys_panel, ".", gbc);
 
         mainFrame.add(keys_panel, BorderLayout.SOUTH);
     }
@@ -91,7 +93,7 @@ public class CalculatorGui {
             gbc.gridx = x;
             gbc.gridy = y;
             gbc.gridwidth = 1;
-            keys_panel.add(new JButton(Integer.toString(i)), gbc);
+            new KeyButton(keys_panel, Integer.toString(i), gbc);
 
             // Adjustments for next number
             if (i % 3 != 0) {
