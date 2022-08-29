@@ -4,15 +4,19 @@ import javax.swing.*;
 
 public class DisplayPanel {
     public JPanel panel;
-    public JLabel label;
+    public JLabel calcDisplay;
+    public JLabel resDisplay;
     public DisplayPanel() {
         panel = new JPanel();
-        label = new JLabel("GOOD MORNING");
+        resDisplay = new JLabel("");
+        calcDisplay = new JLabel("");
 
-        panel.add(label);
+        panel.add(resDisplay);
+        panel.add(calcDisplay);
     }
 
     public void Add(JFrame frame, String layout) {
         frame.add(panel, layout);
     }
 }
+

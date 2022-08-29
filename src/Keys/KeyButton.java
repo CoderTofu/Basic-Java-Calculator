@@ -11,19 +11,19 @@ public class KeyButton implements ActionListener {
     public JButton button;
     public String keyString;
     public DisplayPanel displayPanel;
+    private final KeyFunction keyFunction;
     public KeyButton(JPanel panel, String str, GridBagConstraints gbc, DisplayPanel display) {
         keyString = str;
         button = new JButton(str);
+        keyFunction = new KeyFunction(str, display);
         displayPanel = display;
+
         button.addActionListener(this);
         panel.add(button, gbc);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
-//        KeyFunction keyFunc = new KeyFunction(keyString);
-        displayPanel.label.setText(keyString);
-        System.out.println(displayPanel.label.getText());
+        keyFunction.main();
     }
 }
 // actions when button is pressed

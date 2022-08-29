@@ -29,13 +29,17 @@ public class KeysPanel {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.gridwidth = 2;
+        gbc.gridwidth = 1;
         new KeyButton(panel, "÷", gbc, displayPanel);
 
-        gbc.gridx = 2;
+        gbc.gridx = 1;
         gbc.gridy = 0;
         gbc.gridwidth = 1;
         new KeyButton(panel, "x", gbc, displayPanel);
+
+        gbc.gridx = 2;
+        gbc.gridy = 0;
+        new KeyButton(panel, "+", gbc, displayPanel);
 
         gbc.gridx = 3;
         gbc.gridy = 0;
@@ -47,8 +51,11 @@ public class KeysPanel {
 
         gbc.gridx = 3;
         gbc.gridy = 1;
-        gbc.gridheight = 2;
-        new KeyButton(panel, "+", gbc, displayPanel);
+        new KeyButton(panel, "Del", gbc, displayPanel);
+
+        gbc.gridx = 3;
+        gbc.gridy = 2;
+        new KeyButton(panel, "Clear", gbc, displayPanel);
 
         gbc.gridx = 3;
         gbc.gridy = 3;
