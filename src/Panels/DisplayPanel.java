@@ -5,13 +5,10 @@ import javax.swing.*;
 public class DisplayPanel {
     public JPanel panel;
     public JLabel calcDisplay;
-    public JLabel resDisplay;
     public DisplayPanel() {
         panel = new JPanel();
-        resDisplay = new JLabel("");
         calcDisplay = new JLabel("");
 
-        panel.add(resDisplay);
         panel.add(calcDisplay);
     }
 

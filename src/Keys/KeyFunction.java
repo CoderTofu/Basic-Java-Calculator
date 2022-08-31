@@ -13,18 +13,32 @@ public class KeyFunction {
             Integer.parseInt(keyString);
             keyType = "number";
         } catch (NumberFormatException e) {
-            keyType = "operation";
+            if (keyString.equals("Del")) {
+                keyType = "Del";
+            } else if (keyString.equals("Clear")) {
+                keyType = "Clear";
+            } else {
+                keyType = "operation";
+            }
         }
     }
 
     public void main() {
         String curString = displayPanel.calcDisplay.getText();
-        String newString = switch (keyType) {
-            case "number" -> AddNums(curString);
-            case "operation" -> AddOps(curString);
-            case "=" -> GetResult(curString);
-            default -> "";
-        };
+        String newString = null;
+
+        switch (keyType) {
+            case "number" -> newString = AddNums(curString);
+            case "operation" -> {
+                if (keyStr.equals("=")) {
+                    newString = GetResult(curString);
+                } else {
+                    newString = AddOps(curString);
+                }
+            }
+            case "Del" -> newString = Delete(curString);
+            case "Clear" -> newString = Clear();
+        }
         displayPanel.calcDisplay.setText(newString);
     }
 
@@ -37,6 +51,20 @@ public class KeyFunction {
     }
 
     private String GetResult(String str) {
-        return str + keyStr;
+        return "";
+    }
+
+    private String Delete(String str) {
+        if (str.length() <= 1) {
+            return "";
+        } else {
+            StringBuilder sb = new StringBuilder(str);
+            sb.deleteCharAt(str.length() -1);
+            return sb.toString();
+        }
+    }
+
+    private String Clear() {
+        return "";
     }
 }
