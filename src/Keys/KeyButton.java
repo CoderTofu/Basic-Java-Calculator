@@ -18,6 +18,9 @@ public class KeyButton implements ActionListener {
         keyFunction = new KeyFunction(str, display);
         displayPanel = display;
 
+        button.setPreferredSize(new Dimension(80, 80));
+        button.setMargin(new Insets(5, 5, 0, 0));
+        button.setFont(new Font("Arial", Font.PLAIN, 20));
         button.addActionListener(this);
         panel.add(button, gbc);
     }

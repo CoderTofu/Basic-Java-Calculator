@@ -13,6 +13,10 @@ public class KeysPanel {
         panel = new JPanel();
         displayPanel = display;
 
+        panel.setSize(400, 500);
+        panel.setBorder(BorderFactory.createEmptyBorder(12, 0, 12, 0));
+
+        panel.setBackground(Color.GRAY);
         KeyLayout();
     }
 

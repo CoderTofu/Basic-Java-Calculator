@@ -8,6 +8,7 @@ import java.awt.event.WindowEvent;
 
 public class Main {
     private static final JFrame mainFrame = new JFrame("Calculator");
+
     private static final DisplayPanel displayPanel = new DisplayPanel();
     private static final KeysPanel keysPanel = new KeysPanel(displayPanel);
     public static void main(String[] args) {
@@ -17,10 +18,13 @@ public class Main {
                 System.exit(0);
             }
         });
-        mainFrame.setVisible(true);
         mainFrame.setSize(400, 600);
+        mainFrame.setVisible(true);
+        mainFrame.setResizable(false);
 
         displayPanel.Add(mainFrame, BorderLayout.NORTH);
         keysPanel.Add(mainFrame, BorderLayout.SOUTH);
+
+        displayPanel.Update();
     }
 }
