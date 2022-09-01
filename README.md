@@ -3,9 +3,7 @@
 This is a calculator app I made after watching a couple hours worth of tutorials in java.
 
 ## How do I run this on my machine?
-I have not yet created an executable jar file for this project as it still not yet finished.
-
-However, if you wish to run this on your machine simply pull this repo to a designated folder and run the Main file.
+Just run the main java file and everything should work properly.
 
 No libraries or frameworks was used in this project.
 
