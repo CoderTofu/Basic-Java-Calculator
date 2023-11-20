@@ -39,7 +39,7 @@ public class KeysPanel {
         gbc.gridx = 1;
         gbc.gridy = 0;
         gbc.gridwidth = 1;
-        new KeyButton(panel, "x", gbc, displayPanel);
+        new KeyButton(panel, "*", gbc, displayPanel);
 
         gbc.gridx = 2;
         gbc.gridy = 0;
